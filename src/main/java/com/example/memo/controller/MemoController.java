@@ -55,4 +55,13 @@ public class MemoController {
         return new MemoResponseDto(memo);
     }
 
+
+    // 삭제(delete)
+    @DeleteMapping("/{id}")
+    public void deleteMemo(@PathVariable Long id) {
+
+        memoList.remove(id);
+
+    }
+
 }
